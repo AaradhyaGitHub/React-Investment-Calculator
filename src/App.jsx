@@ -8,27 +8,30 @@ function App() {
         <h1>Investment Calculator</h1>
       </header>
 
-      <div id="user-input">
-        <div className="user-input">
-          <label id="user-input">
-            <input id="user-input" type="text" required />
-          </label>
-          <label id="user-input">
-            <input id="user-input" type="text" required />
-          </label>
-
+      <section id="user-input">
+        <div className="input-group">
+          <p>
+            <label>Initial Investment</label>
+            <input />
+          </p>
+          <p>
+            <label>Initial Investment</label>
+            <input />
+          </p>
         </div>
-        <div className="user-input">
-          <label id="user-input">
-            <input id="user-input" type="text" required />
-          </label>
-          <label id="user-input">
-            <input id="user-input" type="text" required />
-          </label>
-
+        <div className="input-group">
+          <p>
+            <label>Initial Investment</label>
+            <input />
+          </p>
+          <p>
+            <label>Initial Investment</label>
+            <input />
+          </p>
         </div>
-      </div>
-      
+      </section>
+
+
 
     </main>
 
