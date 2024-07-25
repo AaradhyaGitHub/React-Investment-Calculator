@@ -1,8 +1,14 @@
-export default function InputField() {
+export default function InputField({titles}) {
     return (
-        <p>
-            <label>Initial Investment</label>
-            <input />
-        </p>
+        <div className="input-group">
+            <p>
+                <label>Initial Investment</label>
+                <input />
+            </p>
+            <p>
+                <label>Initial Investment</label>
+                <input />
+            </p>
+        </div>
     )
 }
