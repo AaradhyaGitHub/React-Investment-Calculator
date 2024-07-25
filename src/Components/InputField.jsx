@@ -1,13 +1,13 @@
-export default function InputField({titles}) {
+export default function InputField({firstLabel, secondLabel}) {
     return (
         <div className="input-group">
             <p>
-                <label>Initial Investment</label>
-                <input />
+                <label>{firstLabel}</label>
+                <input type="number" required/>
             </p>
             <p>
-                <label>Initial Investment</label>
-                <input />
+                <label>{secondLabel}</label>
+                <input type="number" required/>
             </p>
         </div>
     )

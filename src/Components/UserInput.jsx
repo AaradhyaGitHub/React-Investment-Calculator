@@ -3,9 +3,9 @@ export default function UserInput() {
     return (
         <section id="user-input">
 
-            <InputField />
-            <InputField />
-            
+            <InputField firstLabel={"Initial Investment"} secondLabel={"Annual Investment"}/>
+            <InputField firstLabel={"Expected Return"} secondLabel={"Duration"}/>
+
         </section>
     )
 }
