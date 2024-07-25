@@ -1,35 +1,14 @@
-import logo from "./assets/investment-calculator-logo.png"
+import Header from "./Components/Header.jsx"
+import UserInput from "./Components/UserInput.jsx"
 
 function App() {
   return (
     <main>
-      <header id="header">
-        <img src={logo} alt="main-logo" />
-        <h1>Investment Calculator</h1>
-      </header>
+      <Header />
+      <UserInput />
 
-      <section id="user-input">
-        <div className="input-group">
-          <p>
-            <label>Initial Investment</label>
-            <input />
-          </p>
-          <p>
-            <label>Initial Investment</label>
-            <input />
-          </p>
-        </div>
-        <div className="input-group">
-          <p>
-            <label>Initial Investment</label>
-            <input />
-          </p>
-          <p>
-            <label>Initial Investment</label>
-            <input />
-          </p>
-        </div>
-      </section>
+
+
 
       <table id="result">
         <thead>
