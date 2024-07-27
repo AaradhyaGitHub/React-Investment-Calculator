@@ -22,11 +22,26 @@ function App() {
     });
   };
 
+  const [results, setResults] = useState(null);
+
+
+  const handleCalculation = () => {
+    const calculatedResults = calculateInvestmentResults({
+      initialInvestment: parseFloat(inputs.initialInvestment),
+      annualInvestment: parseFloat(inputs.annualInvestment),
+      expectedReturn: parseFloat(inputs.expectedReturn),
+      duration: parseFloat(inputs.duration),
+    });
+    console.log(calculatedResults);
+    console.log(results);
+    setResults(calculatedResults)
+  };
+
   return (
     <main>
       <Header />
       <UserInput userInputs={inputs} onHandleChange={handleChange} />
-      <Results />
+      <Results results = {results} onHandleCalculation={handleCalculation}/>
     </main>
   );
 }
