@@ -23,15 +23,7 @@ export default function Results() {
                     <td>r1 c5</td>
        
                 </tr>
-                <tr>
-                    <td>r2 c1</td>
-                    <td>r2 c2</td>
-                    <td>r2 c3</td>
-                    <td>r2 c4</td>
-                    <td>r2 c5</td>
-        
 
-                </tr>
             </tbody>
         </table>
     )
