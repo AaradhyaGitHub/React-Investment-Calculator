@@ -1,17 +1,22 @@
 import { useState } from 'react';
 
+export default function UserInput() {
+    const [inputs, setInputs] = useState({
+        'initialInvestment': '',
+        'annualInvestment': '',
+        'expectedReturn': '',
+        'duration': ''
+    });
 
-
-export default function InputField() {
-    const [initialInvestment, setInitialInvestment] = useState('');
-    const [AnnualInvestment, setAnnualInvestment] = useState('');
-    const [ExpectedReturn, setExpectedReturn] = useState('');
-    const [Duration, setDuration] = useState('');
-
-    const handleSetInitialInvestment = (userInput) => setInitialInvestment(userInput.target.value)
-    const handleSetAnnualInvestment = (userInput) => setAnnualInvestment(userInput.target.value)
-    const handleSetExpectedReturn = (userInput) => setExpectedReturn(userInput.target.value)
-    const handleSetDuration = (userInput) => setDuration (userInput.target.value)
+    const handleChange = (event) =>{
+        const {name, value} = event.target;
+        setInputs(
+            {
+                ...inputs,
+                [name] : value
+            }
+        );
+    }
 
 
 
@@ -20,21 +25,21 @@ export default function InputField() {
             <div className="input-group">
                 <p>
                     <label>Initial Investment</label>
-                    <input type="number" required value={initialInvestment} onChange={handleSetInitialInvestment} />
+                    <input type="number" required value={initialInvestment} onChange={handleChange} />
                 </p>
                 <p>
                     <label>Annual Investment</label>
-                    <input type="number" required value={AnnualInvestment} onChange={handleSetAnnualInvestment}/>
+                    <input type="number" required value={annualInvestment} onChange={handleChange}/>
                 </p>
             </div>
             <div className="input-group">
                 <p>
                     <label>Expected Return</label>
-                    <input type="number" required value={ExpectedReturn} onChange={handleSetExpectedReturn}/>
+                    <input type="number" required value={expectedReturn} onChange={handleChange}/>
                 </p>
                 <p>
                     <label>Duration</label>
-                    <input type="number" required value={Duration} onChange={handleSetDuration}/>
+                    <input type="number" required value={duration} onChange={handleChange}/>
                 </p>
             </div>
 
