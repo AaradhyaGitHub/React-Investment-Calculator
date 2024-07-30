@@ -1,9 +1,8 @@
-export default function Results({ results, onHandleCalculation }) {
+import { formatter } from "../util/investment.js";
+
+export default function Results({ results }) {
   return (
     <div>
-        <button onClick={onHandleCalculation}>
-            Calculate
-        </button>
       <table id="result">
         <thead>
           <tr>
@@ -14,7 +13,17 @@ export default function Results({ results, onHandleCalculation }) {
             <th>Invested Capital</th>
           </tr>
         </thead>
-        <tbody>{}</tbody>
+        <tbody>
+          {results.map((result, index) => (
+            <tr key={index}>
+              <td>{formatter.format(result.year)}</td>
+              <td>{formatter.format(result.valueEndOfYear)}</td>
+              <td>{formatter.format(result.interest)}</td>
+              <td>{formatter.format(result.totalInterest)}</td>
+              <td>{formatter.format(result.investedCapital)}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
